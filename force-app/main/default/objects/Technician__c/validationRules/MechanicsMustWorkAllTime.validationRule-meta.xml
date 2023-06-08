@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MechanicsMustWorkAllTime</fullName>
+    <active>true</active>
+    <errorConditionFormula>Name == &apos;Mechanic&apos; &amp;&amp;  Utilization__c &lt;1</errorConditionFormula>
+    <errorDisplayField>Utilization__c</errorDisplayField>
+    <errorMessage>Mechanics must work at least 100%.
+No coffee breaks</errorMessage>
+</ValidationRule>
