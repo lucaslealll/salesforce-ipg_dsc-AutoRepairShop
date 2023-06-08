@@ -1,0 +1,33 @@
+.dialog-container {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.dialog {
+    display: none;
+    width: 300px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.open-dialog-btn {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-dialog-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ccc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
