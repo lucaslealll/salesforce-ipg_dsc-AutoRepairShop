@@ -1,4 +1,10 @@
-# Salesforce DX Project: Next Steps
+# **Software Cloud Computing - Salesforce Auto Repair Shop**
+
+<!-- <img src="./src/logo_ipg_guarda.jpg" height="50" align='right'>
+<img src="./src/logo_merkle.png" height="15" align='right'>
+<img src="./src/logo_salesforce.png" height="50" align='right'> -->
+
+<!-- # Salesforce DX Project: Next Steps -->
 
 Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
 
