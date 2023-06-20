@@ -1,7 +1,9 @@
 public with sharing class TechnicianController_Selector {
-
-    public static List<technician_repairOrder_junction__c> getTechnicians(String repairOrderId){
-        List<technician_repairOrder_junction__c> technicians = [SELECT Id, Technician_Name__c, Quantity__c, Utilization__c FROM  technician_repairOrder_junction__c WHERE FK_RepairOrder__c = :repairOrderId];
+    public static List<Technician__c> getTechnicians(String technicianId) {
+        List<Technician__c> technicians = [SELECT Name FROM Technician__c];
+        // List<Technician__c> technicians = [SELECT Id, Name, Quantity__c, Utilization__c
+        //                                     FROM Technician__c
+        //                                     WHERE RepairOrder__c= :technicianId];
         return technicians;
     }
 }
