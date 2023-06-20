@@ -1,0 +1,11 @@
+Nome de RepairOrder, Due_Date, RepairStatus, Customers, VehicleTest
+"Repair for engine overheating", 2023-07-10, New, John Smith, Unauthorized
+"Tire replacement and alignment", 2023-07-15, Progress, Emily Johnson, Authorized
+"Brake inspection and maintenance", 2023-07-20, Progress, Michael Davis, Authorized
+"Transmission repair", 2023-07-25, Finished, Sarah Thompson, Unauthorized
+"Electrical system diagnostics", 2023-07-30, Progress, Robert Wilson, Unauthorized
+"Oil change and filter replacement", 2023-08-05, Behind Schedule, Michelle Garcia, Authorized
+"Bodywork and paint repair", 2023-08-10, New, Daniel Martinez, Unauthorized
+"Wheel alignment and balancing", 2023-08-15, Progress, Jessica Lee, Unauthorized
+"Engine tune-up and inspection", 2023-08-20, Progress, Andrew Scott, Authorized
+"Radiator repair and coolant flush", 2023-08-25, Finished, Olivia Rodriguez, Unauthorized

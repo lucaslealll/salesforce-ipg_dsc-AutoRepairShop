@@ -1,0 +1,11 @@
+CustomersNIF,CustomersEmail,CustomersName,CustomersPhone,Address,VehicleMake,VehicleModel,VehicleYear,VehicleLicensePlate
+123456789,john@example.com,John Smith,1234567890,123 Main St,Toyota,Corolla,2015,ABC1234
+226964922,emily@example.com,Emily Johnson,2345678901,456 Elm St,Ford,Mustang,2010,DEF5678
+247202061,michael@example.com,Michael Davis,3456789012,789 Oak St,BMW,Serie 3,2018,GHI9012
+298037980,sarah@example.com,Sarah Thompson,4567890123,987 Pine St,Honda,Civic,2014,JKL3456
+232805202,robert@example.com,Robert Wilson,5678901234,654 Maple St,Ford,Fusion,2019,MNO6789
+218582617,michelle@example.com,Michelle Garcia,6789012345,321 Cedar St,Ford,Focus,2016,PQR9012
+215823222,daniel@example.com,Daniel Martinez,7890123456,159 Birch St,Toyota,Hilux,2012,STU3456
+287855821,jessica@example.com,Jessica Lee,8901234567,753 Walnut St,Volkswagen,Gol,2017,VWX7890
+217054676,andrew@example.com,Andrew Scott,9012345678,852 Oak St,Honda,Civic,2019,YZ0123
+217860010,olivia@example.com,Olivia Rodriguez,123456789,963 Pine St,Honda,Fit,2016,ABC4567
