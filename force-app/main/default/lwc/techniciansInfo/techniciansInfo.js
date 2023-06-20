@@ -6,6 +6,9 @@ const COLUMNS = [
     { label: 'Name', fieldName: 'Name', cellAttributes: { alignment: 'center' } },
     { label: 'Quantity', fieldName: 'Quantity__c', cellAttributes: { alignment: 'center' } },
     { label: 'Utilization', fieldName: 'Utilization__c', cellAttributes: { alignment: 'center' } },
+    { label: 'Created By', fieldName: 'CreatedById', cellAttributes: { alignment: 'center' } },
+    { label: 'Owner', fieldName: 'OwnerId', cellAttributes: { alignment: 'center' } },
+    { label: 'Las Modified By', fieldName: 'LastModifiedByID', cellAttributes: { alignment: 'center' } },
 ];
 
 export default class TechniciansInfo extends LightningElement {
