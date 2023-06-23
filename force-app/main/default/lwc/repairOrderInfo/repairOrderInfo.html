@@ -1,0 +1,13 @@
+<template>
+	<lightning-card>
+        <div class="slds-text-heading_large align">Repair Order Information</div>
+        <template if:true={repairOrder.data}>
+            <lightning-datatable
+                key-field="Id"
+                data={repairOrder.data}
+                columns={tabColumns}
+                hide-checkbox-column="true">
+        </lightning-datatable>
+        </template>
+    </lightning-card>
+</template>
