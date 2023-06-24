@@ -1,0 +1,13 @@
+<template>
+    <lightning-card>
+        <div class="slds-text-heading_large align">Replacement Parts Information</div>
+        <template if:true={replacementParts.data}>
+            <lightning-datatable
+                key-field="Id"
+                data={replacementParts.data}
+                columns={columns}
+                hide-checkbox-column="true">
+        </lightning-datatable>
+        </template>
+    </lightning-card>
+</template>
