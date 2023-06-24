@@ -4,6 +4,7 @@ import { LightningElement, api, wire } from "lwc";
 
 const COLUMNS = [
     { label: 'Name', fieldName: 'Name', cellAttributes: { alignment: 'center' } },
+    { label: 'Id', fieldName: 'Technician_Id', cellAttributes: { alignment: 'center' } },
     { label: 'Utilization', fieldName: 'SumUtilization__c', cellAttributes: { alignment: 'center' } },
 ];
 
