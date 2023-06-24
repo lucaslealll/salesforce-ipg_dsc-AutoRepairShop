@@ -4,20 +4,20 @@ import { LightningElement, api, wire } from "lwc";
 
 const COLUMNS = [
     { label: 'Name', fieldName: 'Name', cellAttributes: { alignment: 'center' } },
-    { label: 'Tech Name', fieldName: 'TechnicianFK__c', cellAttributes: { alignment: 'center' } },
-    { label: 'Repair Order Utilization', fieldName: 'UtilizationRepairOrder__c', cellAttributes: { alignment: 'center' } },
+    { label: 'Utilization', fieldName: 'SumUtilization__c', cellAttributes: { alignment: 'center' } },
 ];
 
-export default class RepairOrderInfo extends LightningElement {
+export default class WorkStatus extends LightningElement {
     tabColumns = COLUMNS;
     @api recordId;
 
-    @wire(getWorkStatus, { workData: '$recordId' })
-    workData;
+    @wire(getWorkStatus, { controllerOutput: '$recordId' })
+    controllerOutput;
+
     @api
     refreshList() {
         console.log('Chamou o refresh repair order');
-        refreshApex(this.workData);
-        console.log('repair order result:', this.workData);
+        refreshApex(this.controllerOutput);
+        console.log('repair order result:', this.controllerOutput);
     }
 }
