@@ -1,7 +1,8 @@
-import { LightningElement, api, track } from 'lwc';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
+import { LightningElement, api, track } from 'lwc';
 //import the apex cntroller for this lwc
 import saveTechnicians from '@salesforce/apex/TechnicianController_Main.saveNewTechnician';
+
 export default class AddTechnicians extends LightningElement {
     @api recordId
 
@@ -10,8 +11,15 @@ export default class AddTechnicians extends LightningElement {
         //add a new row with empty fields
         this.techniciansFormInfo.push({
             Name: '',
-            Quantity__c: '',
-            Utilization__c: ''
+            Contact_Information__c: '',
+            Specialization__c: '',
+            Certifications__c: '',
+            Availability__c: '',
+            Work_History__c: '',
+            Skills_and_Experience__c: '',
+            Schedule_and_Assignments__c: '',
+            Cost_Per_Hour__c: '',
+            TotalUtilization__c: '',
         });
     }
     //delete a new form line
@@ -24,16 +32,30 @@ export default class AddTechnicians extends LightningElement {
         } else if (this.techniciansFormInfo.length == 1) {
             this.techniciansFormInfo = [{
                 Name: '',
-                Quantity__c: '',
-                Utilization__c: ''
+                Contact_Information__c: '',
+                Specialization__c: '',
+                Certifications__c: '',
+                Availability__c: '',
+                Work_History__c: '',
+                Skills_and_Experience__c: '',
+                Schedule_and_Assignments__c: '',
+                Cost_Per_Hour__c: '',
+                TotalUtilization__c: '',
             }];
         }
     }
     //track  variables value from html
     @track techniciansFormInfo = [{
         Name: '',
-        Quantity__c: '',
-        Utilization__c: ''
+        Contact_Information__c: '',
+        Specialization__c: '',
+        Certifications__c: '',
+        Availability__c: '',
+        Work_History__c: '',
+        Skills_and_Experience__c: '',
+        Schedule_and_Assignments__c: '',
+        Cost_Per_Hour__c: '',
+        TotalUtilization__c: '',
     }];
     //remove all rows
     removeAllRows() {
@@ -44,13 +66,36 @@ export default class AddTechnicians extends LightningElement {
     //handle the change of the values of each field and row to pick up the last inserted
     handleChange(event) {
         var rowIndex = event.currentTarget.dataset.index;
-        console.log('Aqui1: ');
+        console.log('>>>>>>>>>>>>>: ');
         if (event.target.name === 'Name') {
             this.techniciansFormInfo[rowIndex].Name = event.target.value;
-        } else if (event.target.name === 'Quantity__c') {
-            this.techniciansFormInfo[rowIndex].Quantity__c = event.target.value;
-        } else if (event.target.name === 'Utilization__c') {
-            this.techniciansFormInfo[rowIndex].Utilization__c = event.target.value;
+        }
+        else if (event.target.name === 'Contact_Information__c') {
+            this.techniciansFormInfo[rowIndex].Contact_Information__c = event.target.value;
+        }
+        else if (event.target.name === 'Specialization__c') {
+            this.techniciansFormInfo[rowIndex].Specialization__c = event.target.value;
+        }
+        else if (event.target.name === 'Certifications__c') {
+            this.techniciansFormInfo[rowIndex].Certifications__c = event.target.value;
+        }
+        else if (event.target.name === 'Availability__c') {
+            this.techniciansFormInfo[rowIndex].Availability__c = event.target.value;
+        }
+        else if (event.target.name === 'Work_History__c') {
+            this.techniciansFormInfo[rowIndex].Work_History__c = event.target.value;
+        }
+        else if (event.target.name === 'Skills_and_Experience__c') {
+            this.techniciansFormInfo[rowIndex].Skills_and_Experience__c = event.target.value;
+        }
+        else if (event.target.name === 'Schedule_and_Assignments__c') {
+            this.techniciansFormInfo[rowIndex].Schedule_and_Assignments__c = event.target.value;
+        }
+        else if (event.target.name === 'Cost_Per_Hour__c') {
+            this.techniciansFormInfo[rowIndex].Cost_Per_Hour__c = event.target.value;
+        }
+        else if (event.target.name === 'TotalUtilization__c') {
+            this.techniciansFormInfo[rowIndex].TotalUtilization__c = event.target.value;
         }
     }
     //save new records
@@ -61,7 +106,7 @@ export default class AddTechnicians extends LightningElement {
             .then(result => {
                 if (result) {
                     this.showNotification('Technician created successfully',
-                        'Replacement Part were successfully inserted', 'success');
+                        'New Technicians were successfully inserted', 'success');
                     //create a new event
                     const refreshEvent = new CustomEvent('refresh');
                     //dispatch the event
@@ -75,8 +120,15 @@ export default class AddTechnicians extends LightningElement {
             });
         this.techniciansFormInfo = [{
             Name: '',
-            Quantity__c: '',
-            UnitCost__c: ''
+            Contact_Information__c: '',
+            Specialization__c: '',
+            Certifications__c: '',
+            Availability__c: '',
+            Work_History__c: '',
+            Skills_and_Experience__c: '',
+            Schedule_and_Assignments__c: '',
+            Cost_Per_Hour__c: '',
+            TotalUtilization__c: '',
         }];
     }
     //Send a toast

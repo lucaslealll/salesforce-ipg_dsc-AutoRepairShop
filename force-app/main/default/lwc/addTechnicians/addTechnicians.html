@@ -6,6 +6,7 @@
                 <div class="slds-grid">  
                     <div class="slds-col slds-grid slds-small-size_11-of-12 
                         slds-medium-size_11-of-12 slds-large-size_11-of-12" >
+                        <!-- PRIMEIRAS 5 -->
                         <div class="slds-col margin-horizontal">
                             <lightning-input 
                                 type="text" 
@@ -14,33 +15,114 @@
                                 value={v.Name} 
                                 label="Name" 
                                 onchange={handleChange}
-                                required >
+                                required>
                             </lightning-input>
-                        </div>
+                            </div>
                         <div class="slds-col margin-horizontal">         
                             <lightning-input 
-                                type="number" 
-                                name="Quantity__c" 
+                                type="email" 
+                                name="Contact_Information__c" 
                                 data-index={index} 
-                                value={v.Quantity__c} 
-                                label="Quantity" 
+                                value={v.Contact_Information__c} 
+                                label="Contact Information" 
                                 onchange={handleChange} 
                                 required>
                             </lightning-input>
-                        </div>
-                        
+                            </div>
+                        <div class="slds-col margin-horizontal">         
+                            <lightning-input 
+                                type="text" 
+                                name="Specialization__c" 
+                                data-index={index} 
+                                value={v.Specialization__c} 
+                                label="Specialization" 
+                                onchange={handleChange} 
+                                required>
+                            </lightning-input>
+                            </div>
+                        <div class="slds-col margin-horizontal">         
+                            <lightning-input 
+                                type="text" 
+                                name="Certifications__c" 
+                                data-index={index} 
+                                value={v.Certifications__c} 
+                                label="Certifications" 
+                                onchange={handleChange}>
+                            </lightning-input>
+                            </div>
+                        <div class="slds-col margin-horizontal">         
+                            <lightning-input 
+                                type="text" 
+                                name="Availability__c" 
+                                data-index={index} 
+                                value={v.Availability__c} 
+                                label="Availability" 
+                                onchange={handleChange}>
+                            </lightning-input>
+                            </div>                        
+                    </div>
+                </div>
+                
+                <div class="slds-grid">  
+                    <div class="slds-col slds-grid slds-small-size_11-of-12 
+                        slds-medium-size_11-of-12 slds-large-size_11-of-12" >
+                        <!-- PRIMEIRAS 5 -->
+                        <div class="slds-col margin-horizontal">         
+                            <lightning-input 
+                                type="text" 
+                                name="Work_History__c" 
+                                data-index={index} 
+                                value={v.Work_History__c} 
+                                label="Work History" 
+                                onchange={handleChange} 
+                                required>
+                            </lightning-input>
+                            </div>
+                        <div class="slds-col margin-horizontal">
+                            <lightning-input 
+                                type="text"
+                                name="Skills_and_Experience__c" 
+                                data-index={index} 
+                                value={v.Skills_and_Experience__c} 
+                                label="Skills and Experience" 
+                                onchange={handleChange}>
+                            </lightning-input>
+                            </div> 
+                        <div class="slds-col margin-horizontal">         
+                            <lightning-input 
+                                type="text" 
+                                name="Schedule_and_Assignments__c" 
+                                data-index={index} 
+                                value={v.Schedule_and_Assignments__c} 
+                                label="Schedule and Assignments" 
+                                onchange={handleChange} 
+                                required>
+                            </lightning-input>
+                            </div>
                         <div class="slds-col margin-horizontal">
                             <lightning-input 
                                 type="number"
-                                name="Utilization__c" 
+                                name="Cost_Per_Hour__c" 
                                 data-index={index} 
-                                value={v.Utilization__c} 
-                                label="Utilization" 
-                                onchange={handleChange} 
-                                required>
+                                value={v.Cost_Per_Hour__c} 
+                                label="Cost Per Hour" 
+                                onchange={handleChange}
+                                required="">
                             </lightning-input>
-                        </div> 
+                            </div>
+                        <div class="slds-col margin-horizontal">         
+                            <lightning-input 
+                                type="text" 
+                                name="TotalUtilization__c" 
+                                data-index={index} 
+                                value={v.TotalUtilization__c} 
+                                label="TotalUtilization" 
+                                onchange={handleChange}>
+                            </lightning-input>
+                            </div>
                     </div>
+                    
+                    <!-- BOTAO -->
                     <div class="slds-col slds-grid slds-small-size_1-of-12 
                         slds-medium-size_1-of-12 slds-large-size_1-of-12 action-btn "> 
                         <lightning-button-icon 
@@ -49,11 +131,13 @@
                             class="btnDelete" 
                             variant="border-filled" 
                             data-index={index} 
-                            alternative-text="Delete"     
+                            alternative-text="Trash"     
                             onclick={deleteRow}>
                         </lightning-button-icon>
                     </div>   
-                </div>  
+                    <!-- BOTAO -->
+                </div>
+                <div>--</div>
             </div>
         </template>
         <!-- Add Row Button -->
@@ -64,8 +148,7 @@
             onclick={addRow} 
             class="margin-left"> 
         </lightning-button>
-        <!--class="slds-col slds-grid slds-small-size_1-of-12 
-                        slds-medium-size_1-of-12 slds-large-size_1-of-12 action-btn "-->
+        <!--class="slds-col slds-grid slds-small-size_1-of-12 slds-medium-size_1-of-12 slds-large-size_1-of-12 action-btn "-->
         <lightning-button 
             class="slds-p-left_medium" 
             variant="destructive" 
@@ -81,8 +164,7 @@
                 variant="brand" 
                 name="save" 
                 label="Save" 
-                onclick={handleSave}
-                >
+                onclick={handleSave}>
             </lightning-button>
         </footer>
     </div>
