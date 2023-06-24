@@ -1,0 +1,89 @@
+<template> 
+    <div class="slds-card border-mod">
+        <div class="slds-text-heading_large align">Add Technicians</div>
+        <template for:each={techniciansFormInfo} for:item="v" for:index="index">
+            <div class="slds-card__body" key={v.key} id={v.key}>
+                <div class="slds-grid">  
+                    <div class="slds-col slds-grid slds-small-size_11-of-12 
+                        slds-medium-size_11-of-12 slds-large-size_11-of-12" >
+                        <div class="slds-col margin-horizontal">
+                            <lightning-input 
+                                type="text" 
+                                name="Name" 
+                                data-index={index}  
+                                value={v.Name} 
+                                label="Name" 
+                                onchange={handleChange}
+                                required >
+                            </lightning-input>
+                        </div>
+                        <div class="slds-col margin-horizontal">         
+                            <lightning-input 
+                                type="number" 
+                                name="Quantity__c" 
+                                data-index={index} 
+                                value={v.Quantity__c} 
+                                label="Quantity" 
+                                onchange={handleChange} 
+                                required>
+                            </lightning-input>
+                        </div>
+                        
+                        <div class="slds-col margin-horizontal">
+                            <lightning-input 
+                                type="number"
+                                name="Utilization__c" 
+                                data-index={index} 
+                                value={v.Utilization__c} 
+                                label="Utilization" 
+                                onchange={handleChange} 
+                                required>
+                            </lightning-input>
+                        </div> 
+                    </div>
+                    <div class="slds-col slds-grid slds-small-size_1-of-12 
+                        slds-medium-size_1-of-12 slds-large-size_1-of-12 action-btn "> 
+                        <lightning-button-icon 
+                            icon-name="utility:delete" 
+                            size="medium" 
+                            class="btnDelete" 
+                            variant="border-filled" 
+                            data-index={index} 
+                            alternative-text="Delete"     
+                            onclick={deleteRow}>
+                        </lightning-button-icon>
+                    </div>   
+                </div>  
+            </div>
+        </template>
+        <!-- Add Row Button -->
+        <lightning-button 
+            icon-name="utility:add" 
+            variant="neutral" 
+            label="Add Row"  
+            onclick={addRow} 
+            class="margin-left"> 
+        </lightning-button>
+        <!--class="slds-col slds-grid slds-small-size_1-of-12 
+                        slds-medium-size_1-of-12 slds-large-size_1-of-12 action-btn "-->
+        <lightning-button 
+            class="slds-p-left_medium" 
+            variant="destructive" 
+            label="delete all rows" 
+            title="delete all rows" 
+            icon-name="utility:recycle_bin_full" 
+            onclick={removeAllRows}>
+        </lightning-button>
+        <!-- Save Button -->
+        <footer class="slds-modal__footer margin-top">             
+            <lightning-button 
+                icon-name="utility:save" 
+                variant="brand" 
+                name="save" 
+                label="Save" 
+                onclick={handleSave}
+                >
+            </lightning-button>
+        </footer>
+    </div>
+</template>
