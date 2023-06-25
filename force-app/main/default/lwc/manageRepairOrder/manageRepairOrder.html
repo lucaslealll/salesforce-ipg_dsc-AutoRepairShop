@@ -1,0 +1,22 @@
+<template>
+    <div class="slds-text-heading_large align">Add Technicians</div>
+	<!-- <div>
+		<c-technicians-info
+            record-id={recordId}>
+		</c-technicians-info>x  
+	</div> -->
+	<c-add-technicians 
+        record-id={recordId}
+        onrefresh={handleRefreshTechnician}>
+    </c-add-technicians>
+    
+    <!-- <c-replacement-part-info
+        record-id={recordId}>
+    </c-replacement-part-info> -->
+    <div>
+        <c-add-replacement-parts-v-2 
+            record-id={recordId}
+            onrefresh={handleRefresh}>
+        </c-add-replacement-parts-v-2>
+    </div>
+</template>
