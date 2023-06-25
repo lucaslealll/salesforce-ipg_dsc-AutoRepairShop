@@ -1,0 +1,27 @@
+.margin-horizontal{
+    margin: 0 1%;
+}
+
+.action-btn{
+    padding-top:24px;
+    justify-Content:space-evenly;
+}
+
+.margin-top{
+    margin-top: 1%;
+}
+
+.margin-left{
+    margin-left: 1%;
+}
+
+.align{
+	text-align: center;
+	margin: 2%;
+}
+
+@media (max-width: 768px){   
+    lightning-input {
+        width: max-content;
+    } 
+}

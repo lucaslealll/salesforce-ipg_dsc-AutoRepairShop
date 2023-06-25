@@ -8,11 +8,11 @@ public with sharing class ReplacementPartController_Main {
   @AuraEnabled
   public static Boolean saveNewReplacementParts(
     String ID,
-    String replacePartsFormInfo
+    String replacementPartsV2FormInfo
   ) {
     return ReplacementPartController_Service.insertReplacementParts(
       ID,
-      replacePartsFormInfo
+      replacementPartsV2FormInfo
     );
   }
 }

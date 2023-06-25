@@ -1,0 +1,189 @@
+<template> 
+    <div class="slds-card border-mod">
+        <div class="slds-text-heading_large align">Add Replacement Parts</div>
+        <template for:each={replacementPartsV2FormInfo} for:item="v" for:index="index">
+            <div class="slds-card__body" key={v.key} id={v.key}>
+                <div class="slds-grid">  
+                    <div class="slds-col slds-grid slds-small-size_11-of-12 
+                        slds-medium-size_11-of-12 slds-large-size_11-of-12" >
+                        <!-- PRIMEIRAS 5 -->
+                        <div class="slds-col margin-horizontal">
+                            <lightning-input 
+                                type="text" 
+                                name="Name" 
+                                data-index={index}  
+                                value={v.Name} 
+                                label="Part Name" 
+                                onchange={handleChange}
+                                required>
+                            </lightning-input>
+                            </div>
+                        <div class="slds-col margin-horizontal">         
+                            <lightning-input 
+                                type="number" 
+                                name="UnitCost__c" 
+                                data-index={index} 
+                                value={v.UnitCost__c} 
+                                label="Unit Cost" 
+                                onchange={handleChange} 
+                                required>
+                            </lightning-input>
+                            </div>
+                        <div class="slds-col margin-horizontal">         
+                            <lightning-input 
+                                type="text" 
+                                name="Part_Number__c" 
+                                data-index={index} 
+                                value={v.Part_Number__c} 
+                                label="Part Number" 
+                                onchange={handleChange} 
+                                required>
+                            </lightning-input>
+                            </div>
+                        <div class="slds-col margin-horizontal">         
+                            <lightning-input 
+                                type="text" 
+                                name="VehicleMake__c" 
+                                data-index={index} 
+                                value={v.VehicleMake__c} 
+                                label="Vehicle Make" 
+                                onchange={handleChange}
+                                required>
+                            </lightning-input>
+                            </div>
+                        <div class="slds-col margin-horizontal">         
+                            <lightning-input 
+                                type="text" 
+                                name="Vehicle_Model__c" 
+                                data-index={index} 
+                                value={v.Vehicle_Model__c} 
+                                label="Vehicle Model" 
+                                onchange={handleChange}
+                                required>
+                            </lightning-input>
+                            </div>                        
+                    </div>
+                </div>
+                
+                <div class="slds-grid">  
+                    <div class="slds-col slds-grid slds-small-size_11-of-12 
+                        slds-medium-size_11-of-12 slds-large-size_11-of-12" >
+                        <!-- PRIMEIRAS 5 -->
+                        <div class="slds-col margin-horizontal">         
+                            <lightning-input 
+                                type="number" 
+                                name="Vehicle_Year__c" 
+                                data-index={index} 
+                                value={v.Vehicle_Year__c} 
+                                label="Vehicle Year" 
+                                onchange={handleChange} 
+                                required>
+                            </lightning-input>
+                            </div>
+                        <div class="slds-col margin-horizontal">
+                            <lightning-input 
+                                type="number"
+                                name="Stock__c" 
+                                data-index={index} 
+                                value={v.Stock__c} 
+                                label="Stock" 
+                                onchange={handleChange}
+                                required>
+                            </lightning-input>
+                            </div> 
+                        <div class="slds-col margin-horizontal">         
+                            <lightning-input 
+                                type="text" 
+                                name="Supplier__c" 
+                                data-index={index} 
+                                value={v.Supplier__c} 
+                                label="Supplier" 
+                                onchange={handleChange}>
+                            </lightning-input>
+                            </div>
+                        <div class="slds-col margin-horizontal">
+                            <lightning-input 
+                                type="text"
+                                name="Stock_Location__c" 
+                                data-index={index} 
+                                value={v.Stock_Location__c} 
+                                label="Stock Location" 
+                                onchange={handleChange}
+                                required>
+                            </lightning-input>
+                            </div>
+                        <div class="slds-col margin-horizontal">         
+                            <lightning-input 
+                                type="number" 
+                                name="Minimum_Stock_Level__c" 
+                                data-index={index} 
+                                value={v.Minimum_Stock_Level__c} 
+                                label="Minimun Stock Level" 
+                                onchange={handleChange}
+                                required>
+                            </lightning-input>
+                            </div>
+                    </div>
+                </div>  
+
+                <div class="slds-grid">  
+                    <div class="slds-col slds-grid slds-small-size_11-of-12 
+                        slds-medium-size_11-of-12 slds-large-size_11-of-12" >
+                        <div class="slds-col margin-horizontal">         
+                            <lightning-input 
+                                type="text" 
+                                name="Notes__c" 
+                                data-index={index} 
+                                value={v.Notes__c} 
+                                label="Notes" 
+                                onchange={handleChange}>
+                            </lightning-input>
+                            </div>
+                    </div>
+                    <!-- BOTAO -->
+                    <div class="slds-col slds-grid slds-small-size_1-of-12 
+                        slds-medium-size_1-of-12 slds-large-size_1-of-12 action-btn "> 
+                        <lightning-button-icon 
+                            icon-name="utility:delete" 
+                            size="medium" 
+                            class="btnDelete" 
+                            variant="border-filled" 
+                            data-index={index} 
+                            alternative-text="TrashButton"     
+                            onclick={deleteRow}>
+                        </lightning-button-icon>
+                    </div>   
+                    <!-- BOTAO -->
+                </div>
+            <div>---</div>
+            </div>
+        </template>
+        <!-- Add Row Button -->
+        <lightning-button 
+            icon-name="utility:add" 
+            variant="neutral" 
+            label="Add Row"  
+            onclick={addRow} 
+            class="margin-left"> 
+        </lightning-button>
+        <!--class="slds-col slds-grid slds-small-size_1-of-12 slds-medium-size_1-of-12 slds-large-size_1-of-12 action-btn "-->
+        <lightning-button 
+            class="slds-p-left_medium" 
+            variant="destructive" 
+            label="delete all rows" 
+            title="delete all rows" 
+            icon-name="utility:recycle_bin_full" 
+            onclick={removeAllRows}>
+        </lightning-button>
+        <!-- Save Button -->
+        <footer class="slds-modal__footer margin-top">             
+            <lightning-button 
+                icon-name="utility:save" 
+                variant="brand" 
+                name="save" 
+                label="Save" 
+                onclick={handleSave}>
+            </lightning-button>
+        </footer>
+    </div>
+</template>
