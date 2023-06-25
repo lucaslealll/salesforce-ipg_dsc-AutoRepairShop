@@ -9,9 +9,9 @@ public with sharing class ProcessSelectedTechnicians {
         List<Results> responseWrapper = new List<Results>();
 
         //verificar se está correto esse if 11:31
-        if(requestList.size()>0 && requestList[0].technicianRecord!=null && requestList[0].technicianRecord.Id!=null)//talvez remover essa última condição 10:20
+        if(requestList.size()>0 && requestList[0].technicianRecord!=null && requestList[0].technicianRecord.Name!=null)//talvez remover essa última condição 10:20
         {
-            String existingTechniciansIds = requestList[0].technicianRecord.Id;
+            String existingTechniciansIds = requestList[0].technicianRecord.Name;
             existingTechniciansIds = existingTechniciansIds.removeEnd(',');
             techniciansIdList.addAll(existingTechniciansIds.split(','));
 
