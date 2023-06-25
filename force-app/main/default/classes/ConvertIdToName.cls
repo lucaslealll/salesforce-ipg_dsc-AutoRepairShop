@@ -2,38 +2,6 @@ public with sharing class ConvertIdToName {
     public ConvertIdToName() {
 
     }
-
-    // @InvocableMethod(label='Convert Id to Name' description='Convert Id to Name' category='Account')
-    // public static List<results> convertIdtoNameMethod(List<id> ids){
-
-    //     List<Results> responseWrapper = new List<Results>();
-
-    //     List<Technician__c> techList =  [
-    //         SELECT Name
-    //         FROM Technician__c where id in:ids
-    //     ];
-
-    //     System.debug('techList--->'+techList);
-
-    //     String existingTechniciansIds = ids[0];
-    //     Results response = new Results();
-
-    //     //response.existingTechniciansIds = 'teste';
-
-    //     responseWrapper.add(response); 
-
-    //     return responseWrapper;
-
-    // }
-    // public class Requests{
-    //     @InvocableVariable(label='Record for Input' description='yourDescription')
-    //     public Technician__c technicianRecord; //Onde vamos pegar as variáveis do flow (isso é visível no flow)
-    // }
-
-    // public class Results{
-    //     @InvocableVariable(label='Records for Output' description='yourDescription' required=true)
-    //     public List<String> existingTechniciansIds;
-    // }
         @InvocableMethod(label='Convert Id to Name' description='Convert Id to Name' category='Account')
         public static List <Results> prepareList(List<Requests> requestList){
             List<String> techniciansIdList = new List<String>();
