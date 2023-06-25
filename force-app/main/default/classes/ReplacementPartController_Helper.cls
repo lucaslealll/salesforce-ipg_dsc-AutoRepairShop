@@ -1,10 +1,10 @@
 public with sharing class ReplacementPartController_Helper {
   public static Boolean saveReplacementParts(
     String ID,
-    String replacePartsFormInfo
+    String replacementPartsV2FormInfo
   ) {
     List<ReplacementPart__c> repParts = (List<ReplacementPart__c>) JSON.deserialize(
-      replacePartsFormInfo,
+      replacementPartsV2FormInfo,
       List<ReplacementPart__c>.class
     );
 
@@ -14,7 +14,7 @@ public with sharing class ReplacementPartController_Helper {
 
     System.debug('teste ' + repParts);
 
-    System.debug('teste2 ' + replacePartsFormInfo);
+    System.debug('teste2 ' + replacementPartsV2FormInfo);
 
     try {
       insert repParts;

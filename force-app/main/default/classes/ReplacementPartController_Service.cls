@@ -6,11 +6,11 @@ public with sharing class ReplacementPartController_Service {
   }
   public static Boolean insertReplacementParts(
     String ID,
-    String replacePartsFormInfo
+    String replacementPartsV2FormInfo
   ) {
     return ReplacementPartController_Helper.saveReplacementParts(
       ID,
-      replacePartsFormInfo
+      replacementPartsV2FormInfo
     );
   }
 }
