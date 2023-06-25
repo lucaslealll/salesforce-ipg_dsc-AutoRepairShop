@@ -1,0 +1,13 @@
+<template>
+    <lightning-card>
+      <div class="slds-text-heading_large align">Technicians Involved</div>
+      <template if:true={techIdToNameOutput.data}>
+        <lightning-datatable
+          key-field="Id"
+          data={techIdToNameOutput.data}
+          columns={tabColumns}
+          hide-checkbox-column="true">
+        </lightning-datatable>
+      </template>
+    </lightning-card>
+  </template>
