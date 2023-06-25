@@ -3,6 +3,7 @@ public with sharing class TechIdToNameController_Main {
   public static List<RepairOrder__c> getRepairOrderAllData(
     String repairOrderId
   ) {
+    
     List<RepairOrder__c> repairOrderData = [
       SELECT 
         Name, 
@@ -24,9 +25,26 @@ public with sharing class TechIdToNameController_Main {
         OwnerId
       FROM RepairOrder__c
     ];
+ 
+    List<RepairOrder__c> convertedData = new List<RepairOrder__c>();
+
+    for (RepairOrder__c record : repairOrderData) {
+      if (record.SelectedTechniciansIds__c != null) {
+        
+        String[] technicianIds = record.SelectedTechniciansIds__c.split(', ');
+        
+        for (String item : technicianIds) {
+          RepairOrder__c convertedRecord = new RepairOrder__c();
+          
+          convertedRecord.SelectedTechniciansIds__c = item;
+
+          convertedData.add(convertedRecord);
+        }
+      }
+    }
 
     List<RepairOrder__c> techIdToNameOutput;
-    techIdToNameOutput = repairOrderData;
+    techIdToNameOutput = convertedData;
     return techIdToNameOutput;
   }
 }
