@@ -20,14 +20,23 @@
 	margin: 2%;
 }
 
-.align-left{
+.align-center{
 	text-align: center;
 	margin: 2%;
 }
 
-.align-right{
-	text-align: center;
+.align-left{
+	text-align: left;
 	margin: 2%;
+}
+
+.align-right{
+	text-align: right;
+	margin: 2%;
+}
+
+.text-bold{
+	font-weight: bold;
 }
 
 @media (max-width: 768px){   
