@@ -1,15 +1,14 @@
-[yellow]: FDBC01
-[dark-blue]: 04304E
-
 <div align="center">
   <div style="display: center; justify-content: bottom;">
     <img src="assets/ipg_logo.png" height="150" style='margin-bottom: 15px'>
-</p> 
-
-<div align="center">
-  <div style="display: center; justify-content: bottom;">
-    <img src="assets/merkle_logo.png" height="50" style='margin-bottom: 15px'>
-</p> 
+    </p> 
+  </div> 
+    
+  <div align="center">
+      <div style="display: center; justify-content: bottom;">
+        <img src="assets/merkle_logo.png" height="50" style='margin-bottom: 15px'>
+  </p> 
+  </div> 
 
   ![Version: 1.0.0](https://img.shields.io/badge/%20Version%20-1.0.0-%2304304E?style=flat&labelColor=f23a1d)
   ![Status: Final](https://img.shields.io/badge/%20Status%20-Final%20-%2304304E?style=flat&labelColor=f23a1d)
