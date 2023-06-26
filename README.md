@@ -1,3 +1,21 @@
+<div align="center">
+  <div style="display: center; justify-content: bottom;">
+    <img src="assets/ipg_logo.png" height="150" style='margin-bottom: 15px'>
+</p> 
+
+<div align="center">
+  <div style="display: center; justify-content: bottom;">
+    <img src="assets/merkle_logo.png" height="50" style='margin-bottom: 15px'>
+</p> 
+
+![Version: 1.0.0](https://img.shields.io/badge/%20Version%20-1.0.0-%2304304E?style=flat&labelColor=f23a1d)
+![Status: Final](https://img.shields.io/badge/%20Status%20-In%20progress-%2304304E?style=flat&labelColor=f23a1d)
+[![School: IPG](https://img.shields.io/badge/%20CS%20School%20-PUC%20Minas-%2304304E?style=flat&labelColor=f23a1d)](https://pucpcaldas.br)
+![Project: Merkle - Salesforce](https://img.shields.io/badge/%20Project%20-PIBIC/FAPEMIG-%2304304E?style=flat&labelColor=f23a1d)
+
+  </div>
+</div>
+
 # **Software Cloud Computing - Salesforce Auto Repair Shop**
 
 <!-- <img src="./src/logo_ipg_guarda.jpg" height="50" align='right'>
