@@ -1,4 +1,8 @@
 .align{
     text-align: center;
-    margin: 2%;
+    margin: 1%;
+}
+
+.text-bold{
+	font-weight: bold;
 }
