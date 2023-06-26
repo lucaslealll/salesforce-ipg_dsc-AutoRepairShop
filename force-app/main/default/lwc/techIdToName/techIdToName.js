@@ -12,7 +12,7 @@ const COLUMNS = [
     // { label: 'Due_Date__c', fieldName: 'Due_Date__c', cellAttributes: { alignment: 'center' } },
     // { label: 'RepairStatus__c', fieldName: 'RepairStatus__c', cellAttributes: { alignment: 'center' } },
     // { label: 'ReplacementPart_FK__c', fieldName: 'ReplacementPart_FK__c', cellAttributes: { alignment: 'center' } },
-    { label: 'SelectedTechniciansIds__c', fieldName: 'SelectedTechniciansIds__c', cellAttributes: { alignment: 'center' } },
+    // { label: 'SelectedTechniciansIds__c', fieldName: 'SelectedTechniciansIds__c', cellAttributes: { alignment: 'center' } },
     // { label: 'TechnicianFK__c', fieldName: 'TechnicianFK__c', cellAttributes: { alignment: 'center' } },
     // { label: 'UtilizationRepairOrder__c', fieldName: 'UtilizationRepairOrder__c', cellAttributes: { alignment: 'center' } },
     // { label: 'VehicleTest__c', fieldName: 'VehicleTest__c', cellAttributes: { alignment: 'center' } },

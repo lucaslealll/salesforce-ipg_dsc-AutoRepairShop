@@ -19,7 +19,7 @@ public with sharing class TechIdToNameController_Main {
         TechnicianFK__c, 
         UtilizationRepairOrder__c, 
         VehicleTest__c, 
-        selectedTechniciansIds2__c,
+        // selectedTechniciansIds2__c,
         CreatedById, 
         LastModifiedById,
         OwnerId
