@@ -1,12 +1,12 @@
 <div align="center">
   <div style="display: center; justify-content: bottom;">
-    <img src="assets/ipg_logo.png" height="150" style='margin-bottom: 15px'>
-    </p> 
+    <img src="assets/logo_ipg.png" height="150" style='margin-bottom: 15px'>
+      <img src="assets/logo_salesforce.png" height="100" style='margin-bottom: 35px'>
   </div> 
     
   <div align="center">
       <div style="display: center; justify-content: bottom;">
-        <img src="assets/merkle_logo.png" height="50" style='margin-bottom: 15px'>
+        <img src="assets/logo_merkle.png" height="50" style='margin-bottom: 15px'> 
   </p> 
   </div> 
 
