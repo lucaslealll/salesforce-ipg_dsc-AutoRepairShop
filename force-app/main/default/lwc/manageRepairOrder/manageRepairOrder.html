@@ -1,22 +1,19 @@
 <template>
-    <div class="slds-text-heading_large align">Add Technicians</div>
-	<!-- <div>
-		<c-technicians-info
-            record-id={recordId}>
-		</c-technicians-info>x  
-	</div> -->
-	<c-add-technicians 
-        record-id={recordId}
-        onrefresh={handleRefreshTechnician}>
-    </c-add-technicians>
-    
-    <!-- <c-replacement-part-info
-        record-id={recordId}>
-    </c-replacement-part-info> -->
-    <div>
-        <c-add-replacement-parts-v-2 
-            record-id={recordId}
-            onrefresh={handleRefresh}>
-        </c-add-replacement-parts-v-2>
-    </div>
+	<lightning-card title="Manage Repair Order" icon-name="custom:custom63">
+        <div class="margin-around">
+            <lightning-input type="search" placeholder="Search Repair Order" onchange={handleSearch}></lightning-input>
+        </div>
+        <br/>
+        <template if:true={mrocOutput.data}>
+            <lightning-datatable
+                key-field="Id"
+                data={mrocOutput.data}
+                columns={tabColumns}
+                hide-checkbox-column="true"
+                show-row-number-column="true"
+                onrowaction={handleRowAction}>
+        </lightning-datatable>
+        </template>
+        <template if:true={error}>{error}></template>
+    </lightning-card>
 </template>

@@ -1,6 +1,6 @@
 public with sharing class WorkStatusController_Main {
   @AuraEnabled(cacheable=true)
-  public static List<Technician__c> getWorkStatus(
+  public static List<RepairOrder__c> getWorkStatus(
     String repairOrderId
   ) {
     List<Techinician_RepairOrder_Junction__c> junctionList = new List<Techinician_RepairOrder_Junction__c>();
@@ -10,18 +10,8 @@ public with sharing class WorkStatusController_Main {
       FROM RepairOrder__c
     ];
 
-    // for (Technician__c tInfo : techniciansData) {
-    //   for (RepairOrder__c roInfo : repairOrderData) {
-    //     Techinician_RepairOrder_Junction__c obj = new Techinician_RepairOrder_Junction__c();
-    //     if (tInfo.Name == 'Bruno Pizol') {
-    //       String v1 = 'Bruno Pizol';
-    //       junctionList.add(v1);
-    //     }
-    //   }
-    // }
-
-    List<Technician__c> controllerOutput;
-    controllerOutput = techniciansData;
+    List<RepairOrder__c> controllerOutput;
+    controllerOutput = repairOrderData;
     return controllerOutput;
   }
 }
