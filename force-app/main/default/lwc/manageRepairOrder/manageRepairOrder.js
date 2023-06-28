@@ -1,38 +1,33 @@
-import { LightningElement, api, wire} from 'lwc';
+import getFilteredAccounts from '@salesforce/apex/DataTableController.getFilteredAccounts';
+import getRepOrdDataTable from '@salesforce/apex/ManRepOrdTechController_Main.getRepOrdDataTable';
+import { LightningElement, wire, api } from 'lwc';
 import { NavigationMixin } from 'lightning/navigation';
 import { refreshApex } from "@salesforce/apex";
-import getRepOrdDataTable from "@salesforce/apex/ManRepOrdTechController_Main.getRepOrdDataTable";
 
 const actions = [
     { label: 'View', name: 'view' },
     { label: 'Edit', name: 'edit' },
-    { label: 'Delete', name: 'delete' },
+    // { label: 'Delete', name: 'delete' },
 ];
 
 const COLUMNS = [
+    { label: 'Name', fieldName: 'Name', type: 'text' },
     { label: 'Rep. Order', fieldName: 'Name', cellAttributes: { alignment: 'left' } },
     { label: 'Technician', fieldName: 'TechnicianFK__c', cellAttributes: { alignment: 'left' } },
     { label: 'Parts', fieldName: 'ReplacementPart_FK__c', cellAttributes: { alignment: 'left' } },
-    { label: 'Actions', type: 'action', typeAttributes: { rowActions: actions }, cellAttributes: { alignment: 'center' } },
+    { label: 'Actions', type: 'action', typeAttributes: { rowActions: actions }, cellAttributes: { alignment: 'center' } }
 ];
 
-export default class ManRepOrdTech extends LightningElement {
-    error;
-    searchString;
-    initialRecords;
-    
-    tabColumns = COLUMNS;
-    @api recordId;
+export default class DataTableExample extends LightningElement {
 
+    searchTerm = '';
+    orders = [];
+    columns = COLUMNS;
 
-    // @wire(getRepOrdDataTable, { mrocOutput: '$recordId' })
-    @wire(getRepOrdDataTable, { mrocOutput: 'a026700001Iuw93AAB' })
-    mrocOutput;
-
-    @api
-    refreshList() {
-        console.log('Chamou o refresh repair order');
-        refreshApex(this.controllerOutput);
-        console.log('repair order result:', this.controllerOutput);
+    @wire(getRepOrdDataTable, { searchTerm: '$searchTerm' })
+    wiredAccounts({ error, data }) {
+        if (data) { this.orders = data; }
+        else if (error) { console.error(error); }
     }
+    handleSearchChange(event) { this.searchTerm = event.target.value; }
 }
