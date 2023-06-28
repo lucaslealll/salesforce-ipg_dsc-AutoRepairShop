@@ -1,46 +1,19 @@
-.margin-horizontal{
-    margin: 0 1%;
-}
+.margin-horizontal{ margin: 0 1%; }
 
-.action-btn{
-    padding-top:24px;
-    justify-Content:space-evenly;
-}
+.action-btn{ padding-top:24px; justify-Content:space-evenly; }
 
-.margin-top{
-    margin-top: 1%;
-}
+.margin-top{ margin-top: 1%; }
 
-.margin-left{
-    margin-left: 1%;
-}
+.margin-left{ margin-left: 1%; }
 
-.align-center{
-	text-align: center;
-	margin: 2%;
-}
+.align-center{ text-align: center; margin: 2%; }
 
-.align-center{
-	text-align: center;
-	margin: 2%;
-}
+.align-center{ text-align: center; margin: 2%; }
 
-.align-left{
-	text-align: left;
-	margin: 2%;
-}
+.align-left{ text-align: left; margin: 2%; }
 
-.align-right{
-	text-align: right;
-	margin: 2%;
-}
+.align-right{ text-align: right; margin: 2%; }
 
-.text-bold{
-	font-weight: bold;
-}
+.text-bold{	font-weight: bold; }
 
-@media (max-width: 768px){   
-    lightning-input {
-        width: max-content;
-    } 
-}
+@media (max-width: 768px){   lightning-input { width: max-content; } }
