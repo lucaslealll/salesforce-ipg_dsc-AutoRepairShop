@@ -1,11 +1,16 @@
 <template>
-    <lightning-card title="Manage Repair Orders" icon-name="standard:account">
-        <div class="slds-p-around_medium">
-            <lightning-input label="Search" onchange={handleSearchChange}>
-            </lightning-input>
+    <lightning-card title="Manage Repair Orders" icon-name="standard:snippet_alt">
+        <div class="slds-m-around_medium">
+            <lightning-input label = "Search Repair Order" placeholder="Ex: change oil filter..." onchange = {handleKeyChange}></lightning-input>
         </div>
         <div class="slds-p-around_medium">
-            <lightning-datatable data={orders} columns={columns} key-field="Id">
+            <lightning-datatable 
+                key-field="Id" 
+                data={orders} 
+                columns={columns} 
+                hide-checkbox-column="true" 
+                show-row-number-column="true"
+                onrowaction={handleRowAction}>
             </lightning-datatable>
         </div>
     </lightning-card>
