@@ -12,6 +12,8 @@ const ACTIONS = [
 
 const COLUMNS = [
     { label: 'Name', fieldName: 'Name', type: 'text', cellAttributes: { alignment: 'left' } },
+    { label: 'Technician', fieldName: 'TechnicianFK__c', type: 'lookup' , cellAttributes: { alignment: 'left' } },
+    { label: 'Replacement Part', fieldName: 'ReplacementPart_FK__c', type: 'lookup' , cellAttributes: { alignment: 'left' } },
     {
         label: 'Actions',
         type: 'action',
