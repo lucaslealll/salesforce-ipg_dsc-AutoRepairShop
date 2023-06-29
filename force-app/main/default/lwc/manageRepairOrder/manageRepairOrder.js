@@ -5,11 +5,13 @@ import { api } from 'lwc';
 import { refreshApex } from "@salesforce/apex";
 import { wire } from 'lwc';
 
+// Define actions for row-level actions
 const ACTIONS = [
     { label: 'View', name: 'view' },
     { label: 'Edit', name: 'edit' },
 ];
 
+// Define columns for the data table
 const COLUMNS = [
     { label: 'Name', fieldName: 'Name', type: 'text', cellAttributes: { alignment: 'left' } },
     { label: 'Technician', fieldName: 'TechnicianFK__c', type: 'lookup' , cellAttributes: { alignment: 'left' } },
@@ -26,10 +28,12 @@ export default class DataTableExample extends NavigationMixin(LightningElement) 
     @track error;
     @track columns = COLUMNS;
 
+    // Manipula a mudança no campo de pesquisa
     handleKeyChange(event) {
         const searchTerm = event.target.value;
 
         if (searchTerm) {
+            // Call Apex method to fetch repair orders based on search term
             console.log(searchTerm);
             fetchRepairOrders({ searchTerm })
                 .then(result => {
@@ -46,6 +50,7 @@ export default class DataTableExample extends NavigationMixin(LightningElement) 
         }
     }
 
+    // Manipula ação na linha da tabela
     handleRowAction(event) {
         const actionName = event.detail.action.name;
         const row = event.detail.row;
